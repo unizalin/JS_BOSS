@@ -1,0 +1,122 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+          align-items: center;
+  background-color: #293B29;
+}
+
+.clock {
+  position: relative;
+  border-radius: 80px;
+  width: 350px;
+  height: 350px;
+  background-image: url(http://res.cloudinary.com/dzvkxizui/image/upload/clock-bg.svg);
+  background-position: center center;
+}
+
+.hour-hand {
+  width: 8px;
+  height: 72px;
+  background-color: white;
+  position: absolute;
+  bottom: 50%;
+  left: 49%;
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+  border-radius: 25px;
+}
+.hour-hand:after {
+  content: '';
+  width: 1px;
+  height: 30px;
+  background-color: black;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.min-hand {
+  width: 8px;
+  height: 96px;
+  background-color: orange;
+  position: absolute;
+  bottom: 50%;
+  left: 49%;
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+  border-radius: 25px;
+}
+.min-hand:after {
+  content: '';
+  width: 1px;
+  height: 30px;
+  background-color: white;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.sec-hand {
+  width: 2px;
+  background-color: #91D109;
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+}
+.sec-hand .sec-hand-bottom {
+  bottom: 0;
+  height: 50px;
+}
+.sec-hand .sec-hand-mid {
+  width: 2px;
+  background-color: #91D109;
+  height: 20px;
+  -webkit-transform: rotate(35deg);
+          transform: rotate(35deg);
+  position: absolute;
+  bottom: 52px;
+  left: 1px;
+}
+.sec-hand .sec-hand-mid:after {
+  content: '';
+  width: 10px;
+  background-color: #91D109;
+  height: 2px;
+  position: absolute;
+  left: -10px;
+}
+.sec-hand .sec-hand-mid:before {
+  content: '';
+  width: 9px;
+  background-color: #91D109;
+  height: 2px;
+  position: absolute;
+  bottom: -1px;
+}
+.sec-hand .sec-hand-top {
+  width: 2px;
+  position: absolute;
+  background-color: #91D109;
+  height: 50px;
+  bottom: 75px;
+  right: 2px;
+}
