@@ -17,10 +17,17 @@ num_button.forEach(num => num.addEventListener('click',updateNum))
 
 
 function updateNum(e){
-  console.log(e.target.innerText)
-  if(displayVal == 0){
+  console.log(displayVal.indexOf('.'))
+  if(displayVal == 0 && displayVal.indexOf('.')==-1){
+    console.log('update',displayVal)
     displayVal= ''
   }
+  if( 8 < displayVal.length && displayVal.length<=11){
+    disPlayresult.classList.add("math_size")
+  }else if(displayVal.length>=11){
+    return
+  } 
+
   displayVal+=e.target.innerText
   disPlayresult.innerText=toCurrency(displayVal)
 }
@@ -80,4 +87,32 @@ ac.addEventListener('click', () => {
   evalStrAry_math = [];
   disPlayresult.innerText = displayVal;
   disPlayDetail.innerText = displayVal;
+  disPlayresult.classList.remove("math_size")
+
 }, false);
+
+backspace.addEventListener('click',() => {
+  displayVal = parseFloat(displayVal.length)>0?displayVal.substr(0,displayVal.length-1):0
+  console.log(typeof(displayVal))
+  console.log(displayVal=='')
+  displayVal = displayVal==''?0:displayVal
+  disPlayresult.innerText=toCurrency(displayVal)
+})
+
+decimal.addEventListener('click',(e)=>{
+  if(displayVal.indexOf('.')>-1)return
+  displayVal+=e.target.innerText
+  disPlayresult.innerText=toCurrency(displayVal)
+  console.log(displayVal)
+})
+
+doubleZero.addEventListener('click',(e)=>{
+  console.log(parseFloat(displayVal)!=0)
+  console.log(displayVal.indexOf('.')!=-1)
+  if(parseFloat(displayVal)!=0 || displayVal.indexOf('.')!=-1){
+    displayVal+=e.target.innerText
+    disPlayresult.innerText=toCurrency(displayVal)
+  }
+})
+
+console.log('displayVal',displayVal)

@@ -53,7 +53,9 @@ body {
   white-space: nowrap;
   color: #fff;
 }
-
+.math_size{
+  font-size: 36px;
+}
 .inputButton {
   background: #062145;
   height: 416px;
