@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="all.css">
+  <title>Document</title>
+</head>
+<body>
+  <div class="jsBoss">
+    <div class="wrapper">
+      <div class="top">
+        <div class="left">
+          <h1>空氣品質指標(AQI)</h1>
+          <select class="aqiList">
+            <option selected disabled>請選擇地區</option>
+          </select>
+        </div>
+        <div class="right">
+          <div class="status status1">
+            <div class="statusNum">0~50</div>
+            <div class="statusText">良好</div>
+          </div>
+          <div class="status status2">
+            <div class="statusNum">51~100</div>
+            <div class="statusText">普通</div>
+          </div>
+          <div class="status status3">
+            <div class="statusNum">101~150</div>
+            <div class="statusText">對敏感族群<br>不健康</div>
+          </div>
+          <div class="status status4">
+            <div class="statusNum">151~200</div>
+            <div class="statusText">對所有族群<br>不健康</div>
+          </div>
+          <div class="status status5">
+            <div class="statusNum">201～300</div>
+            <div class="statusText">非常不健康</div>
+          </div>
+          <div class="status status6">
+              <div class="statusNum">301～400</div>
+              <div class="statusText">危害</div>
+            </div>
+        </div>
+      </div>
+      <div class="middle">
+        <div class="selectCity">
+          <div class="city"></div>
+          <div class="updateTime">
+            <span class="time"></span>
+            <span>更新</span>
+          </div>
+        </div>
+      </div>
+      <div class="bottom">
+        <div class="siteTarget">
+    <!--       <div class="siteInfo">
+            <div class="name">中和</div>
+            <div class="aqiNum status3">30</div>
+          </div>
+          <div class="content">
+            <div class="aqiTitle">
+              <div class="text">
+                <span class="chi">臭氧</span>
+                <span class="eng">O3 (ppb)</span>
+              </div>
+              <div class="num">82</div>
+            </div>
+            <div class="aqiTitle">
+              <div class="text">
+                <span class="chi">懸浮微粒</span>
+                <span class="eng">PM10 (μg/m³)</span>
+              </div>
+              <div class="num">82</div>
+            </div>
+            <div class="aqiTitle">
+              <div class="text">
+                <span class="chi">細懸浮微粒</span>
+                <span class="eng">PM2.5 (μg/m³)</span>
+              </div>
+              <div class="num">82</div>
+            </div>
+            <div class="aqiTitle">
+              <div class="text">
+                <span class="chi">一氧化碳</span>
+                <span class="eng">CO (ppm)</span>
+              </div>
+              <div class="num">82</div>
+            </div>
+            <div class="aqiTitle">
+              <div class="text">
+                <span class="chi">二氧化硫</span>
+                <span class="eng">SO2 (ppb)</span>
+              </div>
+              <div class="num">82</div>
+            </div>
+            <div class="aqiTitle">
+              <div class="text">
+                <span class="chi">二氧化氮</span>
+                <span class="eng">NO2 (ppb)</span>
+              </div>
+              <div class="num">82</div>
+            </div>
+          </div> -->
+        </div>
+        <div class="siteDatas" >
+    <!--       <div class="siteInfo" data-item="台北-中和">
+            <div class="name">中和</div>
+            <div class="aqiNum status3">20</div>
+          </div>
+          <div class="siteInfo" data-item="台北-中和">
+            <div class="name">二和</div>
+            <div class="aqiNum status3">30</div>
+          </div> -->
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="footerInfo">
+        <div class="data_info">資料來源：行政院環境保護署</div>
+        <div class="copyRight">Copyright © 2019 HexSchool. All rights reserved.</div>
+      </div>
+    </div>
+  </div>
+  <script src="all.js"></script>
+</body>
+</html>
