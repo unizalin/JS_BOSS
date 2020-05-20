@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,700i&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="all.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="landing" style="display: none;">
+      <div class="title">
+        <div class="sixty">60</div>
+        <h1>SECONDS<span>+−×÷</span><br />CHALLENGE</h1>
+      </div>
+      <div>
+        <a class="start" href="javascript:;">START!</a>
+        <h4>try to answer more as you can</h4>
+      </div>
+    </div>
+
+    <div class="game">
+      <div class="info">
+        <div class="display">
+          <div class="minTitle">60 SECONDS CHALLENGE</div>
+          <div class="scoreBoard">
+            <div class="score">SCORE</div>
+            <div class="scoreNum">000</div>
+          </div>
+        </div>
+        <div class="timer"><span class="min">01</span> : <span class="sec">00</span></div>
+      </div>
+      <div class="quiz">
+        <div class="num" id="num1"></div>
+        <div class="calc" id="operator"></div>
+        <div class="num" id="num2"></div>
+        <div class="calc">=</div>
+        <div class="ans"><input type="text" maxlength="4" /></div>
+      </div>
+    </div>
+
+    <div class="result" style="display: none;">
+      <div class="minTitle">60 SECONDS CHALLENGE</div>
+      <div class="message">YOUR FINAL SCORE</div>
+      <div class="finScore"></div>
+      <a class="restart" href="javascript:;">TRY AGAIN!</a>
+    </div>
+  </div>
+  <script src="all.js"></script>
+</body>
+
+</html>
